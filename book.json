@@ -1,0 +1,22 @@
+{
+  "title": "lutz Gitbook",
+  "author": "lutz",
+  "description": "常用代码记录",
+  "language": "zh-hans",
+  "root": ".",
+  "links": {
+    "sidebar": {
+      "githubHome": "https://github.com/luocong2016"
+    }
+  },
+  "plugins": [
+    "disqus",
+    "prism",
+    "-highlight"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "gitbookuse"
+    }
+  }
+}
