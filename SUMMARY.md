@@ -17,14 +17,14 @@
     * [3.3 Storage](Cache/Storage.md)
     * [3.4 cookie](Cache/cookie.md)
     * [3.5 Application](Cache/Application.md)
-* [4. Browser](Browser/README.md)
-    * [4.1 window](Browser/window.md)
 * [4. this](this/README.md)
     * [4.1 call](this/call.md)
     * [4.2 apply](this/apply.md)
     * [4.3 bind](this/bind.md)
     * [4.4 闭包](this/closure.md)
-* [5. Reg](Reg/README.md)
+* [5. Browser](Browser/README.md)
+    * [5.1 window](Browser/window.md)
+* [6. Reg](Reg/README.md)
 * [版本控制](README.md)
 
 
