@@ -25,6 +25,16 @@
 * [5. Browser](Browser/README.md)
     * [5.1 window](Browser/window.md)
 * [6. Reg](Reg/README.md)
+* [7. MongoDB](MongoDB/quick.md)
+    * [7.0 错误级别](MongoDB/err.md)
+    * [7.1 连接](MongoDB/connect.md)
+    * [7.2 创建删除数据库](MongoDB/editorDatabase.md)
+    * [7.2 创建删除集合](MongoDB/editorCollection.md)
+    * [7.3 插入文档](MongoDB/insert.md)
+    * [7.4 更新文档](MongoDB/update.md)
+    * [7.5 删除文档](MongoDB/remove.md)
+    * [7.6 查询文档](MongoDB/find.md)
+    
 * [版本控制](README.md)
 
 
