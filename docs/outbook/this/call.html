@@ -1,0 +1,680 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.1 call · lutz Gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="lutz">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="apply.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/luocong2016" target="_blank" class="custom-link">githubHome</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../QuickStart.html">
+            
+                <a href="../QuickStart.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Array/">
+            
+                <a href="../Array/">
+            
+                    
+                    1. Array
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Array/compatible.html">
+            
+                <a href="../Array/compatible.html">
+            
+                    
+                    1.1 遍历兼容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Array/unique.html">
+            
+                <a href="../Array/unique.html">
+            
+                    
+                    1.2 数组去重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Array/equals.html">
+            
+                <a href="../Array/equals.html">
+            
+                    
+                    1.3 对象数组查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Array/extremum.html">
+            
+                <a href="../Array/extremum.html">
+            
+                    
+                    1.4 对象数组极值查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Array/compare.html">
+            
+                <a href="../Array/compare.html">
+            
+                    
+                    1.5 对象数组排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Array/renew.html">
+            
+                <a href="../Array/renew.html">
+            
+                    
+                    1.6 删除或替换指定元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Date/">
+            
+                <a href="../Date/">
+            
+                    
+                    2. Date
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Date/format.html">
+            
+                <a href="../Date/format.html">
+            
+                    
+                    2.1 日期格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Date/reg.html">
+            
+                <a href="../Date/reg.html">
+            
+                    
+                    2.2 格式验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cache/README.md">
+            
+                <span>
+            
+                    
+                    3. cache
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cache/WebSQL.html">
+            
+                <a href="../Cache/WebSQL.html">
+            
+                    
+                    3.1 Web SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cache/indexDB.html">
+            
+                <a href="../Cache/indexDB.html">
+            
+                    
+                    3.2 indexDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cache/Storage.html">
+            
+                <a href="../Cache/Storage.html">
+            
+                    
+                    3.3 Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cache/cookie.html">
+            
+                <a href="../Cache/cookie.html">
+            
+                    
+                    3.4 cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Cache/Application.html">
+            
+                <a href="../Cache/Application.html">
+            
+                    
+                    3.5 Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    4. Browser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Browser/window.html">
+            
+                <a href="../Browser/window.html">
+            
+                    
+                    4.1 window
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    4. this
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="call.html">
+            
+                <a href="call.html">
+            
+                    
+                    4.1 call
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    4.2 apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="bind.html">
+            
+                <a href="bind.html">
+            
+                    
+                    4.3 bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    4.4 闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Reg/">
+            
+                <a href="../Reg/">
+            
+                    
+                    5. Reg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    版本控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.1 call</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;call&#x7684;&#x4F5C;&#x7528;&#x548C; apply() &#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;call()&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x7684;&#x662F;&#x82E5;&#x5E72;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x800C;apply()&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
+</blockquote>
+<h1 id="call">call</h1>
+<blockquote>
+<p>fun.call(thisArg, arg1, arg2, ...)</p>
+</blockquote>
+<ul>
+<li>&#x8C03;&#x7528;&#x7236;&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+<li>&#x8C03;&#x7528;&#x533F;&#x540D;&#x51FD;&#x6570;</li>
+<li>&#x8C03;&#x7528;&#x533F;&#x540D;&#x51FD;&#x6570;&#x5E76;&#x4E14;&#x6307;&#x5B9A;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&apos;this&apos;</li>
+</ul>
+<pre class="language-"><code>@param
+    thisArg function&#x8FD0;&#x884C;&#x65F6;&#x6307;&#x5B9A;&#x7684;this&#x503C;
+    arg1, arg2, ... &#x53C2;&#x6570;&#x5217;&#x8868;
+</code></pre><h6 id="calldemo">call_Demo</h6>
+<pre class="language-"><code>// 1. &#x4F7F;&#x7528;call&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7236;&#x6784;&#x9020;&#x51FD;&#x6570;
+function Product(name, price){
+    this.name = name
+    this.price = price
+
+    // price%1===0 &#x6765;&#x8FC7;&#x6EE4;,JavaScript&#x4E2D;&#x5947;&#x8469;&#x7684;&#x5047;&#x503C;(true, [], &apos;1&apos;, &apos;&apos;&#x7B49;)
+    if(!(typeof price === &apos;number&apos; &amp;&amp; price % 1 ===0 &amp;&amp; price &gt;= 0)){
+        throw RangeError(&apos;Cannot create product &apos; + this.name +&apos; whith a negative price&apos;)
+    }
+
+    /*
+        ES6 &#x6574;&#x6570;&#x5224;&#x5B9A;
+        Number.isInteger(1) // true
+        Number.isInteger(1.01) // false
+        Number.isInteger(1.00) // true
+    */
+}
+
+function Food(name, price){
+    Product.call(this, name, price)
+    this.category = &apos;food&apos;
+}
+
+new Food(&apos;Lutz&apos;, 0)
+// {name: &quot;Lutz&quot;, price: 0, category: &quot;food&quot;}
+
+
+
+// 2. &#x4F7F;&#x7528;call&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x533F;&#x540D;&#x51FD;&#x6570;
+var animals = [
+    {species: &apos;Lion&apos;, name: &apos;King&apos;},
+    {species: &apos;Whale&apos;, name: &apos;Fail&apos;}
+]
+
+for (var i = 0; i &lt; animals.length; i++) {
+    (function (i) { 
+        this.print = function () { 
+            console.log(&apos;#&apos; + i  + &apos; &apos; + this.species + &apos;: &apos; + this.name);
+        } 
+        this.print()
+    }).call(animals[i], i)
+}
+// #0 Lion: King
+// #1 Whale: Fail
+
+
+
+// 3. &#x4F7F;&#x7528;call&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x533F;&#x540D;&#x51FD;&#x6570;&#x5E76;&#x4E14;&#x6307;&#x5B9A;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&apos;this&apos;
+function greet(){
+    var reply = [this.person, &apos;Is An Awesome&apos;, this.role].join(&apos; &apos;)
+    console.log(reply)
+}
+
+var i = {
+    person: &apos;Douglas Crockford&apos;, role: &apos;Javascript Developer&apos;
+}
+
+greet.call(i)
+// Douglas Crockford Is An Awesome Javascript Developer
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 4. this">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="apply.html" class="navigation navigation-next " aria-label="Next page: 4.2 apply">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.1 call","level":"1.6.1","depth":2,"next":{"title":"4.2 apply","level":"1.6.2","depth":2,"path":"this/apply.md","ref":"this/apply.md","articles":[]},"previous":{"title":"4. this","level":"1.6","depth":1,"path":"this/README.md","ref":"this/README.md","articles":[{"title":"4.1 call","level":"1.6.1","depth":2,"path":"this/call.md","ref":"this/call.md","articles":[]},{"title":"4.2 apply","level":"1.6.2","depth":2,"path":"this/apply.md","ref":"this/apply.md","articles":[]},{"title":"4.3 bind","level":"1.6.3","depth":2,"path":"this/bind.md","ref":"this/bind.md","articles":[]},{"title":"4.4 闭包","level":"1.6.4","depth":2,"path":"this/closure.md","ref":"this/closure.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["disqus","prism","-highlight"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lutz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lutz Gitbook","language":"zh-hans","links":{"sidebar":{"githubHome":"https://github.com/luocong2016"}},"gitbook":"*","description":"常用代码记录"},"file":{"path":"this/call.md","mtime":"2018-10-08T08:59:34.646Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T10:02:43.227Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
