@@ -1,3 +1,1 @@
-# [doc](https://luocong2016.github.io/selfnote/docs)
-
-# [doc](https://luocong2016.github.io/selfnote/docs)
+# [笔记文档](https://luocong2016.github.io/selfnote/docs)
