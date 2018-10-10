@@ -35,6 +35,7 @@
     * [7.5 删除文档](MongoDB/remove.md)
     * [7.6 查询文档](MongoDB/find.md)
     * [7.7 聚合](MongoDB/aggregate.md)
+    * [7.8 MapReduce](MongoDB/MapReduce.md)
     * [7.9 node中使用](MongoDB/node.md)
     
 * [版本控制](README.md)

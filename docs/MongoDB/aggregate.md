@@ -43,7 +43,7 @@
 
 > db.lutz.aggregate([
     {
-      $group: { _id: '$by_user', num_tutorial: { $sum : 1 } }
+      $group: { _id: '$by_user', num_tutorial: { $sum: 1 } }
     }
   ])
 { "_id" : "lutz", "num_tutorial" : 1 }
@@ -51,7 +51,7 @@
 ```
 #### 以上实例类似sql语句：
 
-> select by_user, count(*) from mycol group by by_user
+> select by_user, count(*) from lutz group by by_user
 
 表达式 | 描述 
 ---|---
@@ -68,7 +68,7 @@ $last | 根据资源文档的排序获取最后一个文档数据
 // $sum
 > db.lutz.aggregate([
     {
-      $group: { _id: '$by_user', num_tutorial: { $sum : 1 } }
+      $group: { _id: '$by_user', num_tutorial: { $sum: 1 } }
     }
   ])
 { "_id" : "lutz", "num_tutorial" : 1 }
@@ -77,7 +77,7 @@ $last | 根据资源文档的排序获取最后一个文档数据
 // $avg
 > db.lutz.aggregate([
     {
-      $group: { _id : '$by_user', num_tutorial : { $avg : '$likes' } }
+      $group: { _id : '$by_user', num_tutorial : { $avg: '$likes' } }
     }
   ])
 { "_id" : "lutz", "num_tutorial" : 750 }
@@ -95,7 +95,7 @@ $last | 根据资源文档的排序获取最后一个文档数据
 // $max
 > db.lutz.aggregate([
     {
-      $group : { _id : "$by_user", num_tutorial : { $max : "$likes" } }
+      $group : { _id : "$by_user", num_tutorial : { $max: "$likes" } }
     }
   ])
 
@@ -129,7 +129,7 @@ $last | 根据资源文档的排序获取最后一个文档数据
 // $last
 > db.lutz.aggregate([
     {
-      $group : { _id : "$by_user", last_url: { $last : "$url" } }
+      $group : { _id : "$by_user", last_url: { $last: "$url" } }
     }
   ])
 { "_id" : "lutz", "last_url" : "http://www.lutz.com" }
