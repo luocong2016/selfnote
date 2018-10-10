@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>7.1 连接 · lutz Gitbook</title>
+        <title>7.7 聚合 · lutz Gitbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="editorDatabase.html" />
+    <link rel="next" href="node.html" />
     
     
-    <link rel="prev" href="err.html" />
+    <link rel="prev" href="find.html" />
     
 
     </head>
@@ -484,7 +484,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.2" data-path="connect.html">
+        <li class="chapter " data-level="1.8.2" data-path="connect.html">
             
                 <a href="connect.html">
             
@@ -575,7 +575,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.9" data-path="aggregate.html">
+        <li class="chapter active" data-level="1.8.9" data-path="aggregate.html">
             
                 <a href="aggregate.html">
             
@@ -649,7 +649,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >7.1 连接</a>
+        <a href=".." >7.7 聚合</a>
     </h1>
 </div>
 
@@ -664,52 +664,248 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="&#x542F;&#x52A8;-mongodb-&#x670D;&#x52A1;">&#x542F;&#x52A8; MongoDB &#x670D;&#x52A1;</h4>
+                                <h4 id="mongodb-&#x805A;&#x5408;">MongoDB &#x805A;&#x5408;</h4>
 <blockquote>
-<p>mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]</p>
+<p>db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)</p>
 </blockquote>
-<ul>
-<li><p>mongodb:// &#x8FD9;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x6307;&#x5B9A;&#x3002;</p>
-</li>
-<li><p>username:password@ &#x53EF;&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5728;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x540E;&#xFF0C;&#x9A71;&#x52A8;&#x90FD;&#x4F1A;&#x5C1D;&#x8BD5;&#x767B;&#x9646;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5E93;</p>
-</li>
-<li><p>host1 &#x5FC5;&#x987B;&#x7684;&#x6307;&#x5B9A;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;host, host1 &#x662F;&#x8FD9;&#x4E2A;URI&#x552F;&#x4E00;&#x8981;&#x586B;&#x5199;&#x7684;&#x3002;&#x5B83;&#x6307;&#x5B9A;&#x4E86;&#x8981;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5730;&#x5740;&#x3002;&#x5982;&#x679C;&#x8981;&#x8FDE;&#x63A5;&#x590D;&#x5236;&#x96C6;&#xFF0C;&#x8BF7;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x4E3B;&#x673A;&#x5730;&#x5740;&#x3002;</p>
-</li>
-<li><p>portX &#x53EF;&#x9009;&#x7684;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;27017</p>
-</li>
-<li><p>/database &#x5982;&#x679C;&#x6307;&#x5B9A;username:password@&#xFF0C;&#x8FDE;&#x63A5;&#x5E76;&#x9A8C;&#x8BC1;&#x767B;&#x9646;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x3002;&#x82E5;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x6253;&#x5F00; test &#x6570;&#x636E;&#x5E93;&#x3002;</p>
-</li>
-<li><p>?options &#x662F;&#x8FDE;&#x63A5;&#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;/database&#xFF0C;&#x5219;&#x524D;&#x9762;&#x9700;&#x8981;&#x52A0;&#x4E0A;/&#x3002;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x9009;&#x9879;&#x90FD;&#x662F;&#x952E;&#x503C;&#x5BF9;name=value&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#x4E4B;&#x95F4;&#x901A;&#x8FC7;&amp;&#x6216;;&#xFF08;&#x5206;&#x53F7;&#xFF09;&#x9694;&#x5F00;</p>
-</li>
-</ul>
-<h4 id="&#x66F4;&#x591A;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;">&#x66F4;&#x591A;&#x8FDE;&#x63A5;&#x5B9E;&#x4F8B;</h4>
-<pre class="language-"><code>&#x8FDE;&#x63A5;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7AEF;&#x53E3;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x3002;
-mongodb://localhost
+<pre class="language-"><code>&gt; show dbs
+&gt; use collections
+&gt; db.lutz.find().pretty()
+&gt; document = [
+    {
+      title: &apos;MongoDB Overview&apos;, 
+      description: &apos;MongoDB is no sql database&apos;,
+      by_user: &apos;lutz.com&apos;,
+      url: &apos;http://www.lutz.com&apos;,
+      tags: [&apos;mongodb&apos;, &apos;database&apos;, &apos;NoSQL&apos;],
+      likes: 100
+    }, {
+      title: &apos;NoSQL Overview&apos;, 
+      description: &apos;No sql database is very fast&apos;,
+      by_user: &apos;lutz.com&apos;,
+      url: &apos;http://www.lutz.com&apos;,
+      tags: [&apos;mongodb&apos;, &apos;database&apos;, &apos;NoSQL&apos;],
+      likes: 10
+    }, {
+      title: &apos;lutz Overview&apos;, 
+      description: &apos;lutz is no sql database&apos;,
+      by_user: &apos;lutz&apos;,
+      url: &apos;http://www.lutz.com&apos;,
+      tags: [&apos;lutz&apos;, &apos;database&apos;, &apos;NoSQL&apos;],
+      likes: 750
+    }
+  ];
 
-&#x4F7F;&#x7528;&#x7528;&#x6237;&#x540D;fred&#xFF0C;&#x5BC6;&#x7801;foobar&#x767B;&#x5F55;localhost&#x7684;admin&#x6570;&#x636E;&#x5E93;&#x3002;
-mongodb://fred:foobar@localhost
+&gt; db.lutz.insertMany(document)
+  {
+    &quot;acknowledged&quot; : true,
+    &quot;insertedIds&quot; : [
+      ObjectId(&quot;5bbc988f545e27257e370865&quot;),
+      ObjectId(&quot;5bbc988f545e27257e370866&quot;),
+      ObjectId(&quot;5bbc988f545e27257e370867&quot;)
+    ]
+  }
 
-&#x4F7F;&#x7528;&#x7528;&#x6237;&#x540D;fred&#xFF0C;&#x5BC6;&#x7801;foobar&#x767B;&#x5F55;localhost&#x7684;baz&#x6570;&#x636E;&#x5E93;&#x3002;
-mongodb://fred:foobar@localhost/baz
+&gt; db.lutz.aggregate([
+    {
+      $group: { _id: &apos;$by_user&apos;, num_tutorial: { $sum : 1 } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;num_tutorial&quot; : 1 }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;num_tutorial&quot; : 2 }
+</code></pre><h4 id="&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7C7B;&#x4F3C;sql&#x8BED;&#x53E5;&#xFF1A;">&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x7C7B;&#x4F3C;sql&#x8BED;&#x53E5;&#xFF1A;</h4>
+<blockquote>
+<p>select by_user, count(*) from mycol group by by_user</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>&#x8868;&#x8FBE;&#x5F0F;</th>
+<th>&#x63CF;&#x8FF0; </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$sum</td>
+<td>&#x8BA1;&#x7B97;&#x603B;&#x548C;</td>
+</tr>
+<tr>
+<td>$avg</td>
+<td>&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x503C;</td>
+</tr>
+<tr>
+<td>$min</td>
+<td>&#x83B7;&#x53D6;&#x96C6;&#x5408;&#x4E2D;&#x6240;&#x6709;&#x6587;&#x6863;&#x5BF9;&#x5E94;&#x503C;&#x5F97;&#x6700;&#x5C0F;&#x503C;</td>
+</tr>
+<tr>
+<td>$max</td>
+<td>&#x83B7;&#x53D6;&#x96C6;&#x5408;&#x4E2D;&#x6240;&#x6709;&#x6587;&#x6863;&#x5BF9;&#x5E94;&#x503C;&#x5F97;&#x6700;&#x5927;&#x503C;</td>
+</tr>
+<tr>
+<td>$push</td>
+<td>&#x5728;&#x7ED3;&#x679C;&#x6587;&#x6863;&#x4E2D;&#x63D2;&#x5165;&#x503C;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;</td>
+</tr>
+<tr>
+<td>$addToSet</td>
+<td>&#x5728;&#x7ED3;&#x679C;&#x6587;&#x6863;&#x4E2D;&#x63D2;&#x5165;&#x503C;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x4F46;&#x4E0D;&#x521B;&#x5EFA;&#x526F;&#x672C;(ES6 Set&#x7C7B;&#x578B;)</td>
+</tr>
+<tr>
+<td>$first</td>
+<td>&#x6839;&#x636E;&#x8D44;&#x6E90;&#x6587;&#x6863;&#x7684;&#x6392;&#x5E8F;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>$last</td>
+<td>&#x6839;&#x636E;&#x8D44;&#x6E90;&#x6587;&#x6863;&#x7684;&#x6392;&#x5E8F;&#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>// $sum
+&gt; db.lutz.aggregate([
+    {
+      $group: { _id: &apos;$by_user&apos;, num_tutorial: { $sum : 1 } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;num_tutorial&quot; : 1 }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;num_tutorial&quot; : 2 }
 
-&#x8FDE;&#x63A5; replica pair, &#x670D;&#x52A1;&#x5668;1&#x4E3A;example1.com&#x670D;&#x52A1;&#x5668;2&#x4E3A;example2&#x3002;
-mongodb://example1.com:27017,example2.com:27017
+// $avg
+&gt; db.lutz.aggregate([
+    {
+      $group: { _id : &apos;$by_user&apos;, num_tutorial : { $avg : &apos;$likes&apos; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;num_tutorial&quot; : 750 }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;num_tutorial&quot; : 55 }
 
-&#x8FDE;&#x63A5; replica set &#x4E09;&#x53F0;&#x670D;&#x52A1;&#x5668; (&#x7AEF;&#x53E3; 27017, 27018, &#x548C;27019):
-mongodb://localhost,localhost:27018,localhost:27019
+// $min
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id : &quot;$by_user&quot;, num_tutorial : { $max : &quot;$likes&quot; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;num_tutorial&quot; : 750 }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;num_tutorial&quot; : 100 }
 
-&#x8FDE;&#x63A5; replica set &#x4E09;&#x53F0;&#x670D;&#x52A1;&#x5668;, &#x5199;&#x5165;&#x64CD;&#x4F5C;&#x5E94;&#x7528;&#x5728;&#x4E3B;&#x670D;&#x52A1;&#x5668; &#x5E76;&#x4E14;&#x5206;&#x5E03;&#x67E5;&#x8BE2;&#x5230;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x3002;
-mongodb://host1,host2,host3/?slaveOk=true
+// $max
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id : &quot;$by_user&quot;, num_tutorial : { $max : &quot;$likes&quot; } }
+    }
+  ])
 
-&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x7B2C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;replica set&#x4E00;&#x90E8;&#x5206;&#x6216;&#x8005;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x6216;&#x8005;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x3002;
-mongodb://host1,host2,host3/?connect=direct;slaveOk=true
+// $push
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id: &quot;$by_user&quot;, url: { $push: &quot;$url&quot; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;url&quot; : [ &quot;http://www.lutz.com&quot; ] }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;url&quot; : [ &quot;http://www.lutz.com&quot;, &quot;http://www.lutz.com&quot; ] }
 
-&#x5F53;&#x4F60;&#x7684;&#x8FDE;&#x63A5;&#x670D;&#x52A1;&#x5668;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5217;&#x51FA;&#x6240;&#x6709;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#x3002;
-&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#x8FDE;&#x63A5;&#x5230;localhost:
-mongodb://localhost/?safe=true
+// $addToSet
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id: &quot;$by_user&quot;, url: { $addToSet : &quot;$url&quot; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;url&quot; : [ &quot;http://www.lutz.com&quot; ] }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;url&quot; : [ &quot;http://www.lutz.com&quot; ] }
 
-&#x4EE5;&#x5B89;&#x5168;&#x6A21;&#x5F0F;&#x8FDE;&#x63A5;&#x5230;replica set&#xFF0C;&#x5E76;&#x4E14;&#x7B49;&#x5F85;&#x81F3;&#x5C11;&#x4E24;&#x4E2A;&#x590D;&#x5236;&#x670D;&#x52A1;&#x5668;&#x6210;&#x529F;&#x5199;&#x5165;&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8BBE;&#x7F6E;&#x4E3A;2&#x79D2;&#x3002;
-mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000
+// $first
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id : &quot;$by_user&quot;, first_url : { $first : &quot;$url&quot; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;first_url&quot; : &quot;http://www.lutz.com&quot; }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;first_url&quot; : &quot;http://www.lutz.com&quot; }
+
+// $last
+&gt; db.lutz.aggregate([
+    {
+      $group : { _id : &quot;$by_user&quot;, last_url: { $last : &quot;$url&quot; } }
+    }
+  ])
+{ &quot;_id&quot; : &quot;lutz&quot;, &quot;last_url&quot; : &quot;http://www.lutz.com&quot; }
+{ &quot;_id&quot; : &quot;lutz.com&quot;, &quot;last_url&quot; : &quot;http://www.lutz.com&quot; }
+</code></pre><h4 id="&#x7BA1;&#x9053;&#x987A;&#x5E8F;&#x5F88;&#x91CD;&#x8981;">&#x7BA1;&#x9053;(&#x987A;&#x5E8F;&#x5F88;&#x91CD;&#x8981;)</h4>
+<table>
+<thead>
+<tr>
+<th>&#x8868;&#x8FBE;&#x5F0F;</th>
+<th>&#x63CF;&#x8FF0; </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$project</td>
+<td>&#x4FEE;&#x6539;&#x8F93;&#x5165;&#x6587;&#x6863;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x91CD;&#x547D;&#x540D;&#x3001;&#x589E;&#x52A0;&#x6216;&#x5220;&#x9664;&#x57DF;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4EE5;&#x53CA;&#x5D4C;&#x5957;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td>$match</td>
+<td>&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x8F93;&#x51FA;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;&#x3002;$match&#x4F7F;&#x7528;MongoDB&#x7684;&#x6807;&#x51C6;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x3002;</td>
+</tr>
+<tr>
+<td>$limit</td>
+<td>&#x7528;&#x6765;&#x9650;&#x5236;MongoDB&#x805A;&#x5408;&#x7BA1;&#x9053;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x6863;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>$skip</td>
+<td>&#x5728;&#x805A;&#x5408;&#x7BA1;&#x9053;&#x4E2D;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4F59;&#x4E0B;&#x7684;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+<tr>
+<td>$unwind</td>
+<td>&#x5C06;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x62C6;&#x5206;&#x6210;&#x591A;&#x6761;&#xFF0C;&#x6BCF;&#x6761;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>$group</td>
+<td>&#x5C06;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6587;&#x6863;&#x5206;&#x7EC4;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x3002;</td>
+</tr>
+<tr>
+<td>$sort</td>
+<td>&#x5C06;&#x8F93;&#x5165;&#x6587;&#x6863;&#x6392;&#x5E8F;&#x540E;&#x8F93;&#x51FA;&#x3002;</td>
+</tr>
+<tr>
+<td>$geoNear</td>
+<td>&#x8F93;&#x51FA;&#x63A5;&#x8FD1;&#x67D0;&#x4E00;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x7684;&#x6709;&#x5E8F;&#x6587;&#x6863;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>// $project
+&gt; db.lutz.aggregate({
+    $project: {
+      title: 1,
+      description: 1
+    }
+  })
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370865&quot;), &quot;title&quot; : &quot;MongoDB Overview&quot;, &quot;description&quot; : &quot;MongoDB is no sql database&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370866&quot;), &quot;title&quot; : &quot;NoSQL Overview&quot;, &quot;description&quot; : &quot;No sql database is very fast&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370867&quot;), &quot;title&quot; : &quot;lutz Overview&quot;, &quot;description&quot; : &quot;lutz is no sql database&quot; }
+
+// $match
+&gt; db.lutz.aggregate([
+    {
+      $match : { likes: { $gt : 50, $lte : 750 } } 
+    }, {
+      $project: { title: 1, description: 1 }
+    }
+  ])
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370865&quot;), &quot;title&quot; : &quot;MongoDB Overview&quot;, &quot;description&quot; : &quot;MongoDB is no sql database&quot; }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370867&quot;), &quot;title&quot; : &quot;lutz Overview&quot;, &quot;description&quot; : &quot;lutz is no sql database&quot; }
+
+// $unwind
+&gt; db.lutz.aggregate({
+    $unwind: &quot;$tags&quot;
+  })
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370865&quot;), &quot;title&quot; : &quot;MongoDB Overview&quot;, &quot;description&quot; : &quot;MongoDB is no sql database&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;mongodb&quot;, &quot;likes&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370865&quot;), &quot;title&quot; : &quot;MongoDB Overview&quot;, &quot;description&quot; : &quot;MongoDB is no sql database&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;database&quot;, &quot;likes&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370865&quot;), &quot;title&quot; : &quot;MongoDB Overview&quot;, &quot;description&quot; : &quot;MongoDB is no sql database&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;NoSQL&quot;, &quot;likes&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370866&quot;), &quot;title&quot; : &quot;NoSQL Overview&quot;, &quot;description&quot; : &quot;No sql database is very fast&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;mongodb&quot;, &quot;likes&quot; : 10 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370866&quot;), &quot;title&quot; : &quot;NoSQL Overview&quot;, &quot;description&quot; : &quot;No sql database is very fast&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;database&quot;, &quot;likes&quot; : 10 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370866&quot;), &quot;title&quot; : &quot;NoSQL Overview&quot;, &quot;description&quot; : &quot;No sql database is very fast&quot;, &quot;by_user&quot; : &quot;lutz.com&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;NoSQL&quot;, &quot;likes&quot; : 10 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370867&quot;), &quot;title&quot; : &quot;lutz Overview&quot;, &quot;description&quot; : &quot;lutz is no sql database&quot;, &quot;by_user&quot; : &quot;lutz&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;lutz&quot;, &quot;likes&quot; : 750 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370867&quot;), &quot;title&quot; : &quot;lutz Overview&quot;, &quot;description&quot; : &quot;lutz is no sql database&quot;, &quot;by_user&quot; : &quot;lutz&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;database&quot;, &quot;likes&quot; : 750 }
+{ &quot;_id&quot; : ObjectId(&quot;5bbc988f545e27257e370867&quot;), &quot;title&quot; : &quot;lutz Overview&quot;, &quot;description&quot; : &quot;lutz is no sql database&quot;, &quot;by_user&quot; : &quot;lutz&quot;, &quot;url&quot; : &quot;http://www.lutz.com&quot;, &quot;tags&quot; : &quot;NoSQL&quot;, &quot;likes&quot; : 750 }
 </code></pre>
                                 
                                 </section>
@@ -737,12 +933,12 @@ mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000
 
             
                 
-                <a href="err.html" class="navigation navigation-prev " aria-label="Previous page: 7.0 错误级别">
+                <a href="find.html" class="navigation navigation-prev " aria-label="Previous page: 7.6 查询文档">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="editorDatabase.html" class="navigation navigation-next " aria-label="Next page: 7.2 创建删除数据库">
+                <a href="node.html" class="navigation navigation-next " aria-label="Next page: 7.9 node中使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -753,7 +949,7 @@ mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7.1 连接","level":"1.8.2","depth":2,"next":{"title":"7.2 创建删除数据库","level":"1.8.3","depth":2,"path":"MongoDB/editorDatabase.md","ref":"MongoDB/editorDatabase.md","articles":[]},"previous":{"title":"7.0 错误级别","level":"1.8.1","depth":2,"path":"MongoDB/err.md","ref":"MongoDB/err.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","prism","-highlight","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"prism":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lutz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lutz Gitbook","language":"zh-hans","links":{"sidebar":{"githubHome":"https://github.com/luocong2016"}},"gitbook":"*","description":"常用代码记录"},"file":{"path":"MongoDB/connect.md","mtime":"2018-10-08T11:55:27.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-09T13:16:27.097Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7.7 聚合","level":"1.8.9","depth":2,"next":{"title":"7.9 node中使用","level":"1.8.10","depth":2,"path":"MongoDB/node.md","ref":"MongoDB/node.md","articles":[]},"previous":{"title":"7.6 查询文档","level":"1.8.8","depth":2,"path":"MongoDB/find.md","ref":"MongoDB/find.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","prism","-highlight"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"prism":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"lutz","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lutz Gitbook","language":"zh-hans","links":{"sidebar":{"githubHome":"https://github.com/luocong2016"}},"gitbook":"*","description":"常用代码记录"},"file":{"path":"MongoDB/aggregate.md","mtime":"2018-10-09T13:16:22.097Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-10T06:00:18.741Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -768,10 +964,6 @@ mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000
     
         
         <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
