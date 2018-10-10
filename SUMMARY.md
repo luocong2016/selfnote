@@ -36,7 +36,8 @@
     * [7.6 查询文档](MongoDB/find.md)
     * [7.7 聚合](MongoDB/aggregate.md)
     * [7.8 MapReduce](MongoDB/MapReduce.md)
-    * [7.9 node中使用](MongoDB/node.md)
+    * [7.9 正则表达式](MongoDB/reg.md)
+    * [7.10 node中使用](MongoDB/node.md)
     
 * [版本控制](README.md)
 

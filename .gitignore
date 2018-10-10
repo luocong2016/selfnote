@@ -1,5 +1,6 @@
 node_modules/
 mochawesome-report/
+_book/
 
 node_modules.zip
 dist.zip

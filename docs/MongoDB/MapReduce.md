@@ -113,3 +113,5 @@ emit|在map函数中emit被调用的次数，也就是所有集合中的数据�
 ouput|结果集合中的文档个数（count对调试非常有帮助）
 ok|是否成功，成功为1
 err |如果失败，这里可以有失败原因，不过从经验上来看，原因比较模糊，作用不大
+
+![image](https://github.com/luocong2016/selfnote/blob/master/img/MapReduce.png?raw=true)
